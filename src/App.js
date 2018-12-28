@@ -14,12 +14,12 @@ class App extends Component {
       items: [],
     };
   }
-// Find out how to use Fetch API
-componentDidMount(){
-  this.fetchWitchAxios();
+
+  componentDidMount(){
+  this.fetchData();
 }
 
-fetchWitchAxios() {
+fetchData() {
   this.serverRequest =
     axios.get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
       .then(response => {
@@ -36,7 +36,7 @@ fetchWitchAxios() {
     return (
       <div className="App">
       <h1>React WORKS</h1>
-        <FlickrImage />
+        <FlickrImage data={this.state.items} />
         <Title />
         <Description />
         <Tags />

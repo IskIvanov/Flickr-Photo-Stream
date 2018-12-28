@@ -1,16 +1,18 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import Gif from './Gif';
 
-export default class FlickrImage extends Component {
-  static propTypes = {
-    prop: PropTypes
-  }
+const FlickrImage = props => {
+  
+  const results = props.data;
+  let gifs = results.map(gif =>
+    <Gif url={gif.images.fixed_height.url} key={gif.id} />
+  );
+  
 
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+  return(
+    <ul className="gif-list">
+      {gifs}
+    </ul>
+  );
 }
+export default FlickrImage;

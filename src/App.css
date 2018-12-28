@@ -2,3 +2,65 @@
   text-align: center;
 }
 
+.gif-wrap {
+  background-color: #fff;
+  margin-bottom: .8em;
+  position: relative;
+}
+
+.gif-list a {
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 0) and (max-width: 549px) {
+  .gif-list li {
+    text-align: center;
+    margin: 20px 0 0;
+    font-size: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .gif-list li {
+    float: left;
+    width: 50%;
+    margin: 0;
+  }
+  .gif-wrap img {
+    height: 235px;
+  }
+  .gif-list .no-gifs {
+    float: none;
+    width: 100%;
+  }
+  .gif-wrap {
+    border: 1px solid white;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-top: 115px;
+  }
+  .main-title {
+    float: left;
+  }
+  .search-form {
+    width: 422px;
+    float: right;
+    margin-top: 34px;
+  }
+  .gif-list li {
+    width: 33.333333333%;
+  }
+}
+
+@media (min-width: 769px) { 
+  .gif-list li:nth-of-type(3n+1) {
+    clear: left;
+  }
+}
