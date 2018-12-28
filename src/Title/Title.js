@@ -10,7 +10,6 @@ export default class Title extends Component {
   render() {
     return (
       <div>
-           
         <Author />
       </div>
     )
